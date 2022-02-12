@@ -128,6 +128,6 @@ public class SinglyLinkedList {
         sll.DeleteEntiresll();
         sll.Traversell();
         
-
+        scn.close();
     }
 }
