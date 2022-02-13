@@ -121,7 +121,7 @@ public class SinglyLinkedList {
 
         System.out.println(sll.searchValue(2));
 
-        sll.DeleteNode(2);
+        sll.DeleteNode(0);
         System.out.println("elements after deletion");
         sll.Traversell();
 
