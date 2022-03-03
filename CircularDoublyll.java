@@ -94,6 +94,38 @@ class CirDoull{
     public void delete(int location){
         if(this.head==null){
             System.out.println("ll is empty");
+        }else if(location==0){
+            if(size==0){
+                head.prev=null;
+                head.next=null;
+                head=null;
+                tail=null;
+            }
+            else{
+                head=head.next;
+                head.prev=tail;
+                tail.next=head;
+            }
+
+        }else if(location>=size){
+            if(size==0){
+                head.prev=null;
+                head.next=null;
+                head=null;
+                tail=null;
+            }
+            else{
+                tail=tail.prev;
+                tail.next=head;
+                head.prev=tail;
+            }
+        }else{
+            Node temp=head;
+            for(int i=0;i<location-1;i++){
+                temp=temp.next;
+            }
+            temp.next=temp.next.next;
+            temp.prev=temp;
         }
         
     }
